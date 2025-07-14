@@ -1,5 +1,5 @@
 
-const API = "1a016acee81dd5d6d86ccbb801a2a71d"
+const API = "1a016acee81dd5d6d86ccbb801a2a71d";
 
 function displayWeather() {
     const inputCity = document.querySelector('.input-city');
@@ -63,5 +63,10 @@ function updateTime(timezone) {
     const UTCtime = Date.now();
     const now = new Date(UTCtime + timezone*1000);
     const timeElement = document.querySelector('.time');
-    timeElement.innerHTML = `${now.getUTCHours()}:${now.getUTCMinutes()}`;
+    timeElement.innerHTML = `${twoDigits(now.getUTCHours())}:${twoDigits(now.getUTCMinutes())}`;
+}
+
+function twoDigits(number) {
+    if(number >=0 && number <= 9) return `0${number}`;
+    else return number;
 }
