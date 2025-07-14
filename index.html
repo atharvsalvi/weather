@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <input type="text" placeholder="Enter city name" class="input-city">
+            <button class="submit-button" onclick="
+                displayWeather();
+            ">Submit</button>
+        </div>
+        <p style="display: none;" class="error">Couldn't find city</p>
+        <div class="card">
+            <div class="card-head">
+                <span class="current-title">Current Weather</span>
+                <span class="time">11:56</span>
+            </div>
+            <hr>
+            <div class="display-section">
+                <div>
+                    <p class="city">Mumbai</p>
+                    <p class="temperature">Temp: 29c</p>
+                </div>
+                <div>
+                    <div class="additional-information">
+                        <p>Humidity</p>
+                        <p class="humidity">45</p>
+                    
+                    </div>
+                    <hr>
+                    <div class="additional-information">
+                        <p>Clouds</p>
+                        <p class="clouds">svdd</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="./index.js"></script>
+</body>
+</html>
